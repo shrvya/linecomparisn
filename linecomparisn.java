@@ -30,14 +30,21 @@ public class linecomparisn {
 		lengthline2 =Math.sqrt((Math.pow((p2-p1), 2))+(Math.pow((q2-q1), 2)));
 		System.out.println("lenth of line 2 is :"+lengthline2);
 
-		if(lengthline1==lengthline2)//checks if lines are equal
+
+		if(lengthline1==lengthline2)
 		{
 			System.out.println("lines are equal");
 		}
-		else
+		else if(lengthline1>lengthline2)
 		{
-			System.out.println("lines are not equal");
+			System.out.println("line 1 is larger than line2");
 		}
+		else {
+			System.out.println("line 2 is larger than linel");
+		}
+		sc.close();
+
+
 
 	}
 
