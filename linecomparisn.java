@@ -3,49 +3,66 @@ package linecomparisn;
 import java.util.Scanner;
 
 public class linecomparisn {
+   private int x2;
+private int x1;
+private int y1;
+private int y2;
 
+
+public  linecomparisn(int x1,int x2,int y1,int y2)
+   {
+
+		this.x1=x1;
+		this.x2=x2;
+		this.y1=y1;
+		this.y2=y2;
+   }
+		public double computelength()
+		{
+			double lengthline;
+			
+			lengthline =Math.sqrt((Math.pow((x2-x1), 2))+(Math.pow((y2-y1), 2)));
+			return lengthline;
+		}
+		
+		
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		System.out.println("welcome to line comparison");
+		 linecomparisn l1=new  linecomparisn(1,3,4,5);
+		 linecomparisn l2=new  linecomparisn(1,3,4,7);
+		 double length;
+		 length=l1.computelength();
+		 Double lengthline1=new Double(length);
+			System.out.println("Length of line 1 is"+length);
+		 length=l2.computelength();
+		 Double lengthline2=new Double(length);
+		 System.out.println("Length of line 2 is"+length);
+		 if(lengthline1.equals(lengthline2))
+		 {
+			 System.out.println("Length of line 1 and line 2 is equal");
+		 }
+		 else {
+			 System.out.println("Length of line 1 and line 2 is not equal!!!");
+		 }
+		 if(lengthline1.compareTo(lengthline2)<0)
+		 {
+			 System.out.println("line 1 is smaller than line 2");
+		 }
+		 else if(lengthline1.compareTo(lengthline2)>0)
+		 {
+			 System.out.println("line 2 is smaller than line 1");
+		 }
+		 
+		 
 		
-		int x1,x2,y1,y2;//2 end points of line 1
-		int p1,p2,q1,q2;//end points of line2
-		
-		Scanner sc =new Scanner(System.in);
-		System.out.println("enter the values for line 1");
-		x1=sc.nextInt();
-		x2=sc.nextInt();
-		y1=sc.nextInt();
-		y2=sc.nextInt();
-		double lengthline1;
-		lengthline1 =Math.sqrt((Math.pow((x2-x1), 2))+(Math.pow((y2-y1), 2)));//find length of line
-		System.out.println("lenth of line 1 is :"+lengthline1);
-		
-		System.out.println("enter the values for line 2");
-		p1=sc.nextInt();
-		p2=sc.nextInt();
-		q1=sc.nextInt();
-		q2=sc.nextInt();
-		double lengthline2;
-		lengthline2 =Math.sqrt((Math.pow((p2-p1), 2))+(Math.pow((q2-q1), 2)));
-		System.out.println("lenth of line 2 is :"+lengthline2);
-
-
-		if(lengthline1==lengthline2)
-		{
-			System.out.println("lines are equal");
-		}
-		else if(lengthline1>lengthline2)
-		{
-			System.out.println("line 1 is larger than line2");
-		}
-		else {
-			System.out.println("line 2 is larger than linel");
-		}
-		sc.close();
 
 
 
+	}
+	private static boolean equals() {
+		// TODO Auto-generated method stub
+		return false;
 	}
 
 }
